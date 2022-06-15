@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>KongBytes docs</title>
+<title>KongBytes</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,8 +13,6 @@
 
 <link href="/assets/css/main.css" rel="stylesheet">
 
-
-    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 
 </head>
 <body>
@@ -65,7 +63,7 @@
             <div class="row">
                 <div class="col-md-10 offset-md-1">
                     <h1>
-                        <span style="font-weight: 500;">ARP scan&nbsp;&nbsp;|&nbsp;&nbsp;</span>Getting started
+                        KongBytes blog
                     </h1>
                 </div> 
             </div> 
@@ -77,52 +75,27 @@
     <div class="ex-basic-1 py-5" style="min-height: 80%;">
         <div class="container">
             <div class="row mb-3">
-                <div class="col-md-9 offset-md-1">
+                <div class="col-md-8 offset-md-2">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="/docs">Documentation</a></li>
-                            <li class="breadcrumb-item"><a href="/docs/arp-scan">ARP scan</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Getting started</li>
+                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
                         </ol>
                     </nav>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2 offset-md-1">
+                <div class="col-md-8 offset-md-2">
 
-                    <b>Documentation</b>
+                    <h2 class="mb-5">Latest blog posts</h2>
+
                     
                     <article class="mt-2">
-                        <a href="/docs/arp-scan/">Introduction</a>
-                    </article>
-                    
-                    <article class="mt-2">
-                        <a href="/docs/arp-scan/getting-started/">Getting started</a>
-                    </article>
-                    
-                    <article class="mt-2">
-                        <a href="/docs/arp-scan/advanced-scans/">Advanced options</a>
+                        <a href="/blog/some-post/">NestJS security check-list</a>
                     </article>
                     
 
                 </div>
-                <div class="col-md-8">
-                    <h3>Getting started with arp-scan</h3>
-<p>Download the <code>arp-scan</code> binary for Linux (Ubuntu, Fedora, Debian, ...). See the <a href="https://github.com/Saluki/arp-scan-rs/releases">releases page</a> for other binaries.</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">wget</span> -O arp-scan https://github.com/Saluki/arp-scan-rs/releases/download/v0.13.1/arp-scan-v0.13.1-x86_64-unknown-linux-musl <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x ./arp-scan</code></pre>
-<p>Optionnaly, fetch the IEEE OUI reference file (CSV format) that contains all MAC address vendors.</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">wget</span> -O /usr/share/arp-scan/ieee-oui.csv http://standards-oui.ieee.org/oui/oui.csv</code></pre>
-<p>List all available network interfaces.</p>
-<pre class="language-bash"><code class="language-bash">./arp-scan -l</code></pre>
-<p>Launch a scan on interface <code>wlp1s0</code>.</p>
-<pre class="language-bash"><code class="language-bash">./arp-scan -i wlp1s0</code></pre>
-<p>Enhance the minimum scan timeout to 5 seconds (by default, 2 seconds).</p>
-<pre class="language-bash"><code class="language-bash">./arp-scan -i wlp1s0 -t 5s</code></pre>
-<p>Perform an ARP scan on the default network interface, VLAN 45 and JSON output.</p>
-<pre class="language-bash"><code class="language-bash">./arp-scan -Q <span class="token number">45</span> -o json</code></pre>
-
-                </div> 
             </div> 
         </div> 
     </div>

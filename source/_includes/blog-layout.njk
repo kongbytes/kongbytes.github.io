@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+
+    {% include "_header.njk" %}
+
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+</head>
+<body>
+
+    {% include "_navbar.njk" %}
+
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <h1>
+                        KongBytes blog
+                    </h1>
+                </div> 
+            </div> 
+        </div> 
+    </header> 
+    <!-- end of header -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 py-5" style="min-height: 80%;">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-8 offset-md-2">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ page_title }}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 blog-content">
+                    {{ content | safe }}
+                </div> 
+            </div> 
+        </div> 
+    </div>
+    <!-- end of basic -->
+
+    {% include "_footer.njk" %}
+
+</body>
+</html>

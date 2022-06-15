@@ -8,8 +8,11 @@ module.exports = function(config) {
     config.addPassthroughCopy('CNAME');
 
     config.addCollection('arp', (collection) => {
-        //return collection.getFilteredByTag('arp-scan').slice(-5);
         return collection.getFilteredByGlob('source/docs/arp-scan/*');
+    });
+
+    config.addCollection('posts', (collection) => {
+        return collection.getFilteredByGlob('source/blog/*');
     });
 
     return {

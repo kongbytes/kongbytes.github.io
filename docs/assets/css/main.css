@@ -29,7 +29,6 @@ Colors:
 - Body text - dark gray #4d5055
 ******************************************/
 
-
 /**************************/
 /*     General Styles     */
 /**************************/
@@ -1278,3 +1277,16 @@ a:hover.back-to-top {
 	/* end of extra pages */
 }
 /* end of min-width 1200px */
+
+
+/**************************/
+/* Custom                 */
+/**************************/
+
+.blog-content p {
+	font-size: 1.125rem;
+}
+
+.blog-content h1 {
+	padding-bottom: 2.5rem;
+}

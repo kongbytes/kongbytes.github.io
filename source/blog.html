@@ -1,0 +1,62 @@
+---
+header_title: KongBytes
+---
+<!doctype html>
+<html>
+<head>
+
+    {% include "_header.njk" %}
+
+</head>
+<body>
+
+    {% include "_navbar.njk" %}
+
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <h1>
+                        KongBytes blog
+                    </h1>
+                </div> 
+            </div> 
+        </div> 
+    </header> 
+    <!-- end of header -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 py-5" style="min-height: 80%;">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-8 offset-md-2">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+
+                    <h2 class="mb-5">Latest blog posts</h2>
+
+                    {% for post in collections.posts %}
+                    <article class="mt-2">
+                        <a href="{{ post.url | url }}">{{ post.data.page_title }}</a>
+                    </article>
+                    {% endfor %}
+
+                </div>
+            </div> 
+        </div> 
+    </div>
+    <!-- end of basic -->
+
+    {% include "_footer.njk" %}
+
+</body>
+</html>
