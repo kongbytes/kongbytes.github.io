@@ -5,6 +5,7 @@ module.exports = function(config) {
     config.addPlugin(syntaxHighlight);
 
     config.addPassthroughCopy('source/assets');
+    config.addPassthroughCopy('CNAME');
 
     config.addCollection('arp', (collection) => {
         //return collection.getFilteredByTag('arp-scan').slice(-5);
