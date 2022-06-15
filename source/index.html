@@ -1,54 +1,16 @@
 ---
-title: KongBytes
+header_title: KongBytes
 ---
 <!doctype html>
 <html>
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>{{ title }}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
-
-    <link href="/assets/css/main.css" rel="stylesheet">
+    {% include "_header.njk" %}
 
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
-            
-            <!-- Image Logo -->
-            <!--<a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
-
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text page-scroll" href="#">KongBytes</a>
-
-            <div class="navbar-collapse offcanvas-collapse justify-content-end">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="https://github.com/kongbytes">Github</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="https://twitter.com/kongbytes">Twitter</a>
-                    </li>
-                </ul>
-            </div> 
-        
-        </div> 
-    </nav>
-    <!-- end of navigation -->
+    {% include "_navbar.njk" %}
 
     <!-- Header -->
     <header id="header" class="header">
@@ -118,47 +80,7 @@ title: KongBytes
                     </p>
                 </div> 
             </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <i class="far fa-gem"></i>
-                        <h4>JOI SECURITY</h4>
-                        <p>
-                            Enhance your Node.js Joi validation schemas with this essential security CLI. This
-                            SAST tool performs attacks against your Joi schemas and detects vulnerabilities.
-                        </p>
-                        <a href="https://github.com/kongbytes/joi-security">
-                            View project
-                        </a>
-                    </div> 
-                </div> 
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <i class="fas fa-code"></i>
-                        <h4>ARP SCAN</h4>
-                        <p>
-                            A Rust rewrite of the well-known arp-scan network utility. This CLI detects hosts
-                            in a local network using the ARP protocol and provides new features such as JSON exports.
-                        </p>
-                        <a href="https://github.com/kongbytes/arp-scan-rs">
-                            View project
-                        </a>
-                    </div> 
-                </div>
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <i class="fas fa-tv"></i>
-                        <h4>WATCHDOG</h4>
-                        <p>
-                            An all-in-one network monitoring tool that detects incidents accross multiple regions. 
-                            Minimal memory usage, Grafana-ready and favors configuration as code.
-                        </p>
-                        <a href="https://github.com/kongbytes/watchdog-rs">
-                            View project
-                        </a>
-                    </div> 
-                </div> 
-            </div>
+            {% include "_projects.njk" %}
         </div>
     </div> 
     <!-- end of services -->
@@ -173,16 +95,7 @@ title: KongBytes
     </div>
     <!-- end of section divider -->
 
-    <!-- Copyright -->
-    <div class="copyright bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a class="no-line" href="#your-link">KongBytes</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include "_footer.njk" %}
 
 </body>
 </html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>KongBytes docs</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+        
+        <!-- Image Logo -->
+        <!--<a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
+
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <a class="navbar-brand logo-text page-scroll" href="/">KongBytes</a>
+
+        <div class="navbar-collapse offcanvas-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/docs">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="https://github.com/kongbytes">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="https://twitter.com/kongbytes">Twitter</a>
+                </li>
+            </ul>
+        </div> 
+    
+    </div> 
+</nav>
+<!-- end of navigation -->
+
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <h1>
+                        <span style="font-weight: 500;">ARP scan&nbsp;&nbsp;|&nbsp;&nbsp;</span>Advanced options
+                    </h1>
+                </div> 
+            </div> 
+        </div> 
+    </header> 
+    <!-- end of header -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 py-5" style="min-height: 80%;">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-9 offset-md-1">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/docs">Documentation</a></li>
+                            <li class="breadcrumb-item"><a href="/docs/arp-scan">ARP scan</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Advanced options</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 offset-md-1">
+
+                    <b>Documentation</b>
+                    
+                    <article class="mt-2">
+                        <a href="/docs/arp-scan/">Introduction</a>
+                    </article>
+                    
+                    <article class="mt-2">
+                        <a href="/docs/arp-scan/getting-started/">Getting started</a>
+                    </article>
+                    
+                    <article class="mt-2">
+                        <a href="/docs/arp-scan/advanced-scans/">Advanced options</a>
+                    </article>
+                    
+
+                </div>
+                <div class="col-md-8">
+                    <h3>Advanced scan options</h3>
+<h4>Get help <code>-h</code></h4>
+<p>Display the main help message with all commands and available ARP scan options.</p>
+<h4>List interfaces <code>-l</code></h4>
+<p>List all available network interfaces. Using this option will only print a list of interfaces and exit the process.</p>
+<h4>Select scan profile <code>-p stealth</code></h4>
+<p>A scan profile groups together a set of ARP scan options to perform a specific scan. The scan profiles are listed below:</p>
+<ul>
+<li><code>default</code> : default option, this is enabled if the <code>-p</code> option is not used</li>
+<li><code>fast</code> : fast ARP scans, the results may be less accurate</li>
+<li><code>stealth</code> : slower scans that minimize the network impact</li>
+<li><code>chaos</code> : randomly-selected values for the ARP scan</li>
+</ul>
+<h4>Select interface <code>-i eth0</code></h4>
+<p>Perform a scan on the network interface <code>eth0</code>. The first valid IPv4 network on this interface will be used as scan target. By default, the first network interface with an <code>up</code> status and a valid IPv4 will be selected.</p>
+<h4>Set IPv4 network range <code>-n 172.17.0.0/24</code></h4>
+<p>By default, the scan process will select the first IPv4 network on the interface and start a scan on the whole range. With the <code>--network</code> option, an IPv4 network can be defined <em>(this may be used for specific scans on a subset of network targets)</em>.</p>
+<h4>Set global scan timeout <code>-t 15s</code></h4>
+<p>Enforce a timeout of at least 15 seconds. This timeout is a minimum value (scans may take a little more time). Default value is <code>2000ms</code>.</p>
+<h4>Change ARP request interval <code>-I 39ms</code></h4>
+<p>By default, a <code>10ms</code> gap will be set between ARP requests to avoid an ARP storm on the network. This value can be changed to reduce or increase the milliseconds between each ARP request.</p>
+<h4>Enforce scan bandwidth limit <code>-B 1000</code></h4>
+<p>Enforce a bandwidth limit (expressed in bits per second) on ARP scans. The <code>--bandwidth</code> option conflicts with <code>--interval</code> since these 2 arguments change the same parameter underneath.</p>
+<h4>Numeric mode <code>--numeric</code></h4>
+<p>Switch to numeric mode. This will skip the local hostname resolution process and will only display IP addresses.</p>
+<h4>Host retry count <code>-r 3</code></h4>
+<p>Send 3 ARP requests to the targets (retry count). By default, a single ARP request will be sent to each host.</p>
+<h4>Change source IPv4 <code>-S 192.168.1.130</code></h4>
+<p>Change or force the IPv4 address sent as source in the broadcasted ARP packets. By default, a valid IPv4 address on the network interface will be used. This option may be useful for isolated hosts and security checks.</p>
+<h4>Change destination MAC <code>-M 55:44:33:22:11:00</code></h4>
+<p>Change or force the MAC address sent as destination ARP request. By default, a broadcast destination (<code>00:00:00:00:00:00</code>) will be set.</p>
+<h4>Change source MAC <code>-M 11:24:71:29:21:76</code></h4>
+<p>Change or force the MAC address sent as source in the ARP request. By default, the network interface MAC will be used.</p>
+<h4>Randomize target list <code>-R</code></h4>
+<p>Randomize the IPv4 target list before sending ARP requests. By default, all ARP requests are sent in ascending order by IPv4 address.</p>
+<h4>Use custom MAC OUI file <code>--oui-file ./my-file.csv</code></h4>
+<p>Use a <a href="http://standards-oui.ieee.org/oui/oui.csv">custom OUI MAC file</a>, the default path will be set to <code>/usr/share/arp-scan/ieee-oui.csv&quot;</code>.</p>
+<h4>Set VLAN ID <code>-Q 42</code></h4>
+<p>Add a 802.1Q field in the Ethernet frame. This fields contains the given VLAN ID for outgoing ARP requests. By default, the Ethernet frame is sent without 802.1Q fields (no VLAN).</p>
+<h4>Customize ARP operation ID <code>--arp-op 1</code></h4>
+<p>Change the ARP protocol operation field, this can cause scan failure.</p>
+<h4>Customize ARP hardware type <code>--hw-type 1</code></h4>
+<p>Change the ARP hardware type field, this can cause scan failure.</p>
+<h4>Customize ARP hardware address length <code>--hw-addr 6</code></h4>
+<p>Change the ARP hardware address length field, this can cause scan failure.</p>
+<h4>Customize ARP protocol type <code>--proto-type 2048</code></h4>
+<p>Change the ARP protocol type field, this can cause scan failure.</p>
+<h4>Customize ARP protocol adress length <code>--proto-addr 4</code></h4>
+<p>Change the ARP protocol address length field, this can cause scan failure.</p>
+<h4>Set output format <code>-o json</code></h4>
+<p>Set the output format to either <code>plain</code> (a full-text output with tables), <code>json</code>, <code>yaml</code> or <code>csv</code>.</p>
+<h4>Show version <code>--version</code></h4>
+<p>Display the ARP scan CLI version and exits the process.</p>
+
+                </div> 
+            </div> 
+        </div> 
+    </div>
+    <!-- end of basic -->
+
+    <!-- Copyright -->
+<div class="copyright bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Copyright © <a class="no-line" href="#your-link">KongBytes</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,6 +1,15 @@
-module.exports = function (eleventyConfig) {
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-    eleventyConfig.addPassthroughCopy('source/assets')
+module.exports = function(config) {
+
+    config.addPlugin(syntaxHighlight);
+
+    config.addPassthroughCopy('source/assets');
+
+    config.addCollection('arp', (collection) => {
+        //return collection.getFilteredByTag('arp-scan').slice(-5);
+        return collection.getFilteredByGlob('source/docs/arp-scan/*');
+    });
 
     return {
         dir: {

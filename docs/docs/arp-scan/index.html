@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>KongBytes docs</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+        
+        <!-- Image Logo -->
+        <!--<a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
+
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <a class="navbar-brand logo-text page-scroll" href="/">KongBytes</a>
+
+        <div class="navbar-collapse offcanvas-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/docs">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="https://github.com/kongbytes">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="https://twitter.com/kongbytes">Twitter</a>
+                </li>
+            </ul>
+        </div> 
+    
+    </div> 
+</nav>
+<!-- end of navigation -->
+
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <h1>
+                        <span style="font-weight: 500;">ARP scan&nbsp;&nbsp;|&nbsp;&nbsp;</span>Introduction
+                    </h1>
+                </div> 
+            </div> 
+        </div> 
+    </header> 
+    <!-- end of header -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 py-5" style="min-height: 80%;">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-9 offset-md-1">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/docs">Documentation</a></li>
+                            <li class="breadcrumb-item"><a href="/docs/arp-scan">ARP scan</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Introduction</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 offset-md-1">
+
+                    <b>Documentation</b>
+                    
+                    <article class="mt-2">
+                        <a href="/docs/arp-scan/">Introduction</a>
+                    </article>
+                    
+                    <article class="mt-2">
+                        <a href="/docs/arp-scan/getting-started/">Getting started</a>
+                    </article>
+                    
+                    <article class="mt-2">
+                        <a href="/docs/arp-scan/advanced-scans/">Advanced options</a>
+                    </article>
+                    
+
+                </div>
+                <div class="col-md-8">
+                    <h3>Introduction</h3>
+<p>Find all hosts in your local network using this fast ARP scanner. The CLI is written in Rust and provides a minimal scanner that finds all hosts using the ARP protocol. Inspired by the awesome <a href="https://github.com/royhills/arp-scan">arp-scan project</a>.</p>
+<p>✔ Minimal Rust binary &amp; fast ARP scans</p>
+<p>✔ Scan customization (ARP, timings, interface, DNS, ...)</p>
+<p>✔ MAC vendor search</p>
+<p>✔ JSON, YAML &amp; CSV exports</p>
+<p>✔ Pre-defined scan profiles (default, fast, stealth &amp; chaos)</p>
+<h3>Examples</h3>
+<p>Start by listing all network interfaces on the host.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># List all network interfaces</span><br>$ arp-scan -l<br><br>lo                   ✔ UP      00:00:00:00:00:00    <span class="token number">127.0</span>.0.1/8<br>enp3s0f0             ✔ UP      4f:6e:cd:78:bb:5a    <br>enp4s0               ✖ DOWN    d0:c5:e9:40:00:4a    <br>wlp1s0               ✔ UP      d2:71:d8:29:a8:72    <span class="token number">192.168</span>.1.21/24<br>docker0              ✔ UP      <span class="token number">49</span>:fd:cd:60:73:77    <span class="token number">172.17</span>.0.1/16<br>br-fa6dc54a91ee      ✔ UP      <span class="token number">61</span>:ab:c1:a7:50:79    <span class="token number">172.18</span>.0.1/16<br><br>Found <span class="token number">6</span> network interfaces, <span class="token number">5</span> seems up <span class="token keyword">for</span> ARP scan<br>Default network interface will be wlp1s0</code></pre>
+<p>Perform a default ARP scan on the local network with safe defaults.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># Perform a scan on the default network interface</span><br>$ arp-scan<br><br>Selected interface wlp1s0 with IP <span class="token number">192.168</span>.1.21/24<br>Estimated scan <span class="token function">time</span> 2068ms <span class="token punctuation">(</span><span class="token number">10752</span> bytes, <span class="token number">14000</span> bytes/s<span class="token punctuation">)</span><br>Sending <span class="token number">256</span> ARP requests <span class="token punctuation">(</span>waiting at least 800ms, 0ms request interval<span class="token punctuation">)</span><br><br><span class="token operator">|</span> IPv4            <span class="token operator">|</span> MAC               <span class="token operator">|</span> Hostname     <span class="token operator">|</span> Vendor       <span class="token operator">|</span><br><span class="token operator">|</span>-----------------<span class="token operator">|</span>-------------------<span class="token operator">|</span>--------------<span class="token operator">|</span>--------------<span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.1     <span class="token operator">|</span> <span class="token number">91</span>:10:fb:30:06:04 <span class="token operator">|</span> router.home  <span class="token operator">|</span> Vendor, Inc. <span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.11    <span class="token operator">|</span> <span class="token number">45</span>:2e:99:bc:22:b6 <span class="token operator">|</span> host-a.home  <span class="token operator">|</span>              <span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.15    <span class="token operator">|</span> bc:03:c2:92:47:df <span class="token operator">|</span> host-b.home  <span class="token operator">|</span> Vendor, Inc. <span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.18    <span class="token operator">|</span> 8d:eb:56:17:b8:e1 <span class="token operator">|</span> host-c.home  <span class="token operator">|</span> Vendor, Inc. <span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.34    <span class="token operator">|</span> <span class="token number">35</span>:e0:6c:1e:e3:fe <span class="token operator">|</span>              <span class="token operator">|</span> Vendor, Inc. <span class="token operator">|</span><br><br>ARP scan finished, <span class="token number">5</span> hosts found <span class="token keyword">in</span> <span class="token number">1.623</span> seconds<br><span class="token number">7</span> packets received, <span class="token number">5</span> ARP packets filtered</code></pre>
+
+                </div> 
+            </div> 
+        </div> 
+    </div>
+    <!-- end of basic -->
+
+    <!-- Copyright -->
+<div class="copyright bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Copyright © <a class="no-line" href="#your-link">KongBytes</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+</html>
