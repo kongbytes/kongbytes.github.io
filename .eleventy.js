@@ -1,9 +1,12 @@
 module.exports = function (eleventyConfig) {
-    // Return your Object options:
+
+    eleventyConfig.addPassthroughCopy('source/assets')
+
     return {
         dir: {
             input: 'source',
             output: 'docs'
-        }
+        },
+        passthroughFileCopy: true
     }
 };
