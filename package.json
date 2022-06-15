@@ -1,0 +1,14 @@
+{
+  "name": "@kongbytes/public-website",
+  "version": "1.0.0",
+  "description": "KongBytes public website",
+  "private": true,
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  }
+}
