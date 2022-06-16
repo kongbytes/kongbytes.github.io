@@ -1,5 +1,4 @@
 {
     "layout": "blog-layout.njk",
-    "tags": "blog",
-    "header_title": "KongBytes blog"
+    "tags": "blog"
 }

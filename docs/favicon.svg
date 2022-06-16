@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666665 8.4666669"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1918">
+      <path
+         d="M 0,792 H 612 V 0 H 0 Z"
+         id="path1916" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1966">
+      <path
+         d="M 0,792 H 612 V 0 H 0 Z"
+         id="path1964" />
+    </clipPath>
+    <clipPath
+       id="clipPath2075-3"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="47.23518"
+         x="37.150513"
+         height="4.2404337"
+         width="2.8865604"
+         id="rect2077-6"
+         style="opacity:1;fill:#ff9900;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       id="clipPath2075"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="47.23518"
+         x="37.150513"
+         height="4.2404337"
+         width="2.8865604"
+         id="rect2077"
+         style="opacity:1;fill:#ff9900;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       id="clipPath2075-3-9"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="47.23518"
+         x="37.150513"
+         height="4.2404337"
+         width="2.8865604"
+         id="rect2077-6-3"
+         style="opacity:1;fill:#ff9900;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       id="clipPath2075-3-5"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="47.23518"
+         x="37.150513"
+         height="4.2404337"
+         width="2.8865604"
+         id="rect2077-6-38"
+         style="opacity:1;fill:#ff9900;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       id="clipPath2075-3-5-3"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="47.23518"
+         x="37.150513"
+         height="4.2404337"
+         width="2.8865604"
+         id="rect2077-6-38-3"
+         style="opacity:1;fill:#ff9900;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-288.5333)"
+     id="layer1">
+    <g
+       transform="translate(-12.620037,226.98213)"
+       id="g5330">
+      <rect
+         style="opacity:1;fill:#c84826;fill-opacity:1;stroke:none;stroke-width:0.09274535;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect2156"
+         width="8.4666672"
+         height="8.4666672"
+         x="12.620037"
+         y="61.55117"
+         ry="0.95652378" />
+      <g
+         style="fill:#ffffff"
+         id="g5312"
+         transform="matrix(0.82365815,0,0,0.82365815,-15.284742,11.345519)">
+        <g
+           style="fill:#ffffff;stroke:#ffffff;stroke-opacity:1"
+           id="g1609-9-4-36-2-5"
+           transform="matrix(1.6136663,0,0,1.568265,-28.259043,-12.685968)">
+          <path
+             transform="matrix(-1,0,0,1,78.677972,1.0205532)"
+             clip-path="url(#clipPath2075-3)"
+             d="m 34.754905,48.376702 c 0.165365,0 0.165365,0 0.165365,0 m 3.230024,0 c 0.992187,0 0.992187,0 0.992187,0 m -3.726293,0 c 2.220611,0 2.220611,0 2.220611,0 m 1.634075,0.58113 c 0.153554,0 0.153554,0 0.153554,0 m -4.343514,0 c 0.685083,0 0.685083,0 0.685083,0 m 0.54334,0 c 2.433222,0 2.433222,0 2.433222,0 m -3.112397,-1.162269 h -0.165364 m 0.65555,0 c 2.102493,0 2.102493,0 2.102493,0 m -1.842632,2.905692 c 1.488281,0 1.488281,0 1.488281,0 m -2.362351,-0.58113 c 0.519716,0 0.519716,0 0.519716,0 m 2.198174,0.0042 c 0.614212,0 0.614212,0 0.614212,0 m -2.292668,-0.0042 c 1.181174,0 1.181174,0 1.181174,0 m -0.213102,-0.581139 c 1.393787,0 1.393787,0 1.393787,0 m -3.968258,0 c 2.007997,0 2.007997,0 2.007997,0"
+             style="fill:#ffffff;stroke:#ffffff;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path1518-8-3-6-8-3" />
+        </g>
+        <g
+           id="flowRoot23-2-3-4-5"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+           transform="matrix(0.14984717,0,0,0.14984717,8.275408,26.548679)"
+           aria-label="KB">
+          <path
+             id="path3876"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';letter-spacing:-2.29000044px;fill:#ffffff;stroke-width:1.19447017"
+             d="m 233.08633,281.12066 h -8.33 l -7.95137,-13.98337 -2.74511,1.97791 v 12.00546 h -7.33608 v -33.62449 h 7.33608 v 16.19127 l 2.8871,-4.76078 7.90404,-11.43049 h 8.14069 l -11.05146,15.15633 z" />
+        </g>
+      </g>
+    </g>
+    <flowRoot
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot5009"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5011"><rect
+           y="332.51965"
+           x="749"
+           height="177"
+           width="455"
+           id="rect5013" /></flowRegion><flowPara
+         id="flowPara5015" /></flowRoot>    <g
+       style="fill:#ffffff"
+       id="g3637-0"
+       transform="matrix(0.42903074,0,0,0.42903074,228.07741,167.59748)" />
+    <g
+       transform="matrix(2.3206144,0,0,2.3206144,-864.83478,-518.26251)"
+       id="g3386">
+      <g
+         aria-label="KongBytes"
+         transform="matrix(0.36635159,0,0,0.36635159,245.03939,-14.955047)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="flowRoot23-2-4-6-6-4-8" />
+    </g>
+  </g>
+</svg>

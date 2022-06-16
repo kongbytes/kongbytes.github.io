@@ -179,6 +179,7 @@ a:hover {
 	line-height: 0;
 	text-decoration: none;
 	transition: all 0.2s;
+	text-transform: uppercase;
 }
 
 .btn-solid-lg:hover {
@@ -1289,4 +1290,10 @@ a:hover.back-to-top {
 
 .blog-content h1 {
 	padding-bottom: 2.5rem;
+}
+
+.kb-project-subtitle {
+	color: #c84826;
+	font-weight: 400;
+	font-family: 'Open Sans';
 }

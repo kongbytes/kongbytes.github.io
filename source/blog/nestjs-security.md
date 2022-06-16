@@ -1,5 +1,8 @@
 --- 
+header_title: Discover the KongBytes NestJS security check-list
 page_title: NestJS security check-list
+
+post_summary: Discover in this blog post a set of essential NestJS security techniques.
 --- 
 
 # {{ page_title }}

@@ -6,6 +6,7 @@ module.exports = function(config) {
 
     config.addPassthroughCopy('source/assets');
     config.addPassthroughCopy('CNAME');
+    config.addPassthroughCopy('favicon.svg');
 
     config.addCollection('arp', (collection) => {
         return collection.getFilteredByGlob('source/docs/arp-scan/*');

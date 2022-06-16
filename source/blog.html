@@ -1,8 +1,8 @@
 ---
-header_title: KongBytes
+header_title: Blog, technical insights & latest news
 ---
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 
     {% include "_header.njk" %}
@@ -30,7 +30,7 @@ header_title: KongBytes
     <div class="ex-basic-1 py-5" style="min-height: 80%;">
         <div class="container">
             <div class="row mb-3">
-                <div class="col-md-8 offset-md-2">
+                <div class="col-md-10 offset-md-1">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/#">Home</a></li>
@@ -40,15 +40,27 @@ header_title: KongBytes
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8 offset-md-2">
+                <div class="col-md-10 offset-md-1">
 
-                    <h2 class="mb-5">Latest blog posts</h2>
+                    <h2 class="mb-4">Latest blog posts</h2>
 
-                    {% for post in collections.posts %}
-                    <article class="mt-2">
-                        <a href="{{ post.url | url }}">{{ post.data.page_title }}</a>
-                    </article>
-                    {% endfor %}
+                    <div class="row">
+                        {% for post in collections.posts %}
+                        <div class="col-md-4">
+                            <a href="{{ post.url | url }}">
+                                <article class="card mt-2">
+                                    <!--<img src="..." class="card-img-top" alt="...">-->
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ post.data.page_title }}</h5>
+                                        <p class="card-text">
+                                            {{ post.data.post_summary }}
+                                        </p>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
 
                 </div>
             </div> 
