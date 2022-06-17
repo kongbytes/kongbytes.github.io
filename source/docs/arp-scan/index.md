@@ -1,6 +1,8 @@
 --- 
 header_title: ARP scan, Rust-based ARP network scans
-page_title: Introduction
+header_description: Discover the arp-scan-rs KongBytes project, a Rust rewrite of the ARP scanner CLI that performs local network discovery  using the ARP protocol
+
+doc_title: Introduction
 --- 
 
 ### Introduction

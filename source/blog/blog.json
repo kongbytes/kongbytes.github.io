@@ -1,4 +1,6 @@
 {
+    "date": "Last Modified",
+
     "layout": "blog-layout.njk",
     "tags": "blog"
 }

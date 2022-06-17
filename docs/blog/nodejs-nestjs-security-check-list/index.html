@@ -5,8 +5,8 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta name="description" content="The KongBytes blog provides insights on open-source projects and technical topics around web development, DevOps, security and more">
-<title>KongBytes | Blog, technical insights & latest news</title>
+<meta name="description" content="Learn how to secure your Node.js API projects using a NestJS security check-list with best-practices (rate-limiting, encryption, authentication, ...)">
+<title>KongBytes | Discover the KongBytes NestJS security check-list</title>
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
@@ -17,6 +17,8 @@
 
 <link href="/assets/css/main.css" rel="stylesheet">
 
+
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 
 </head>
 <body>
@@ -83,39 +85,43 @@
     <div class="ex-basic-1 py-5" style="min-height: 80%;">
         <div class="container">
             <div class="row mb-3">
-                <div class="col-md-10 offset-md-1">
+                <div class="col-md-8 offset-md-2">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                            <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">NestJS security check-list</li>
                         </ol>
                     </nav>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-10 offset-md-1">
+                <div class="col-md-8 offset-md-2 blog-content">
+                    <h1>NestJS security check-list</h1>
+<p>The <a href="https://nestjs.com/">NestJS framework</a> is one of the most popular Node.js frameworks out here. It has a well-designed architecture, is reliable for server-side applications and comes with a modular set of features (GraphQL, task scheduling, queues, ...) that can be used for many use-cases.</p>
+<p>The goal of this blog post is to discover the security features offered by the NestJS framework and other common security measures that will secure your server-side applications.</p>
+<ul>
+<li>Enable rate-limiting</li>
+<li>Filter all request items</li>
+<li>Force HTTPS</li>
+<li>Use HTTP headers</li>
+<li>Take care of cookie security</li>
+<li>Encrypt sensitive data</li>
+<li>Use CSRF protection</li>
+<li>Authentication essentials</li>
+<li>Enforce proper authorization</li>
+<li>Audit the NPM packages</li>
+</ul>
+<p>Let's discover some security techniques below.</p>
+<h4>Enable rate-limiting</h4>
+<p>An attacker can damage your server-side applications by sending a huge amount of requests to your API endpoints (DDOS). The server resources (such memory, network bandwidth, CPU, ...) will therefore not be able to handle properly other HTTP requests. This attack does not require extended planning from the attacker and can cause a denial of service.</p>
+<p>The NestJS framework provides the <a href="https://github.com/nestjs/throttler">@nestjs/throttler</a> package that can be used for rate-limiting requests. Rate-limiting means that a given API user identified by request properties(such as the IP address) will be able to perform a limited number of API calls in a given time-range. Start by including the package in your project.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> i --save @nestjs/throttler</code></pre>
+<p>See the <a href="https://docs.nestjs.com/security/rate-limiting">NestJS rate-limiting documentation</a> for set-up details. By default, the rate-limiting module uses an in-memory storage for blacklisted requesters. This is a safe-default for most projects, but keep in mind that distributed NestJS API (such as a Kubernetes production environment) will require other storage providers.</p>
 
-                    <h2 class="mb-4">Latest KongBytes blog posts</h2>
-
-                    <div class="row">
-                        
-                        <div class="col-md-4">
-                            <div class="text-box">
-                                <h5 class="mb-3">NestJS security check-list</h5>
-                                <p class="mb-3">
-                                    Discover in this blog post a set of essential NestJS security techniques that will enhance your API protection.
-                                </p>
-                                <div class="pb-3">
-                                    &nbsp;
-                                    <a class="float-end" href="/blog/nodejs-nestjs-security-check-list/">
-                                        Read more...
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
+                </div> 
+                <div class="col-md-8 offset-md-2 mt-5 fst-italic">
+                    Updated Jun 17, 2022 by the KongBytes team
                 </div>
             </div> 
         </div> 

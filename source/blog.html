@@ -1,5 +1,6 @@
 ---
 header_title: Blog, technical insights & latest news
+header_description: The KongBytes blog provides insights on open-source projects and technical topics around web development, DevOps, security and more
 ---
 <!doctype html>
 <html lang="en">
@@ -42,22 +43,23 @@ header_title: Blog, technical insights & latest news
             <div class="row">
                 <div class="col-md-10 offset-md-1">
 
-                    <h2 class="mb-4">Latest blog posts</h2>
+                    <h2 class="mb-4">Latest KongBytes blog posts</h2>
 
                     <div class="row">
                         {% for post in collections.posts %}
                         <div class="col-md-4">
-                            <a href="{{ post.url | url }}">
-                                <article class="card mt-2">
-                                    <!--<img src="..." class="card-img-top" alt="...">-->
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ post.data.page_title }}</h5>
-                                        <p class="card-text">
-                                            {{ post.data.post_summary }}
-                                        </p>
-                                    </div>
-                                </article>
-                            </a>
+                            <div class="text-box">
+                                <h5 class="mb-3">{{ post.data.post_title }}</h5>
+                                <p class="mb-3">
+                                    {{ post.data.post_summary }}
+                                </p>
+                                <div class="pb-3">
+                                    &nbsp;
+                                    <a class="float-end" href="{{ post.url | url }}">
+                                        Read more...
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         {% endfor %}
                     </div>

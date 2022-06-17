@@ -1,6 +1,8 @@
 --- 
 header_title: Getting started with Rust-based ARP scans
-page_title: Getting started
+header_description: Learn how to perform ARP scans on local networks using this getting started guide of the KongBytes arp-scan-rs project, a Rust-based ARP scanner
+
+doc_title: Getting started
 --- 
 
 ### Getting started with arp-scan
