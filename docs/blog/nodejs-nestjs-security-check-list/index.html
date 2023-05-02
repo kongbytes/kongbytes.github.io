@@ -13,7 +13,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
 
 <link href="/assets/css/main.css" rel="stylesheet">
 
@@ -97,9 +97,19 @@
             </div>
             <div class="row">
                 <div class="col-md-8 offset-md-2 blog-content">
+
+                    <img class="kb-blog-catch" src="/assets/images/blog/nestjs_checklist.webp" alt="Person writing a check list in a notebook"/>
+
+                    <h2 class="kb-blog-catch">Enhancing your NestJS security</h2>
                     <h1>NestJS security check-list</h1>
-<p>The <a href="https://nestjs.com/">NestJS framework</a> is one of the most popular Node.js frameworks out here. It has a well-designed architecture, is reliable for server-side applications and comes with a modular set of features (GraphQL, task scheduling, queues, ...) that can be used for many use-cases.</p>
-<p>The goal of this blog post is to discover the security features offered by the NestJS framework and other common security measures that will secure your server-side applications.</p>
+                    
+
+                    <p class="kb-blog-meta">
+                        1 min read | Updated May 2, 2023 | # Node.js, API, security, NestJS
+                    </p>
+
+                    <p>The <a href="https://nestjs.com/">NestJS framework</a> is one of the most popular Node.js frameworks out here. It has a well-designed architecture, is reliable for server-side applications and comes with a modular set of features (GraphQL, task scheduling, queues, ...) that can be used for many use-cases.</p>
+<p>The goal of this blog post is to <strong>discover the security features</strong> offered by the NestJS framework and other common security measures that will secure your server-side applications.</p>
 <ul>
 <li>Enable rate-limiting</li>
 <li>Filter all request items</li>
@@ -115,13 +125,16 @@
 <p>Let's discover some security techniques below.</p>
 <h4>Enable rate-limiting</h4>
 <p>An attacker can damage your server-side applications by sending a huge amount of requests to your API endpoints (DDOS). The server resources (such memory, network bandwidth, CPU, ...) will therefore not be able to handle properly other HTTP requests. This attack does not require extended planning from the attacker and can cause a denial of service.</p>
-<p>The NestJS framework provides the <a href="https://github.com/nestjs/throttler">@nestjs/throttler</a> package that can be used for rate-limiting requests. Rate-limiting means that a given API user identified by request properties(such as the IP address) will be able to perform a limited number of API calls in a given time-range. Start by including the package in your project.</p>
+<p>The NestJS framework provides the <a href="https://github.com/nestjs/throttler">@nestjs/throttler</a> package that can be used for rate-limiting requests. Rate-limiting means that a given API user identified by request properties (such as the IP address) will be able to perform a <strong>limited number of API calls in a given time-range</strong>. Start by including the package in your project.</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> i --save @nestjs/throttler</code></pre>
 <p>See the <a href="https://docs.nestjs.com/security/rate-limiting">NestJS rate-limiting documentation</a> for set-up details. By default, the rate-limiting module uses an in-memory storage for blacklisted requesters. This is a safe-default for most projects, but keep in mind that distributed NestJS API (such as a Kubernetes production environment) will require other storage providers.</p>
+<h4>Filter all request items</h4>
+<p>Most of the content sent in an HTTP request can be tampered by an attacker. This includes essential components such as the body, URL and headers.</p>
 
+    
                 </div> 
                 <div class="col-md-8 offset-md-2 mt-5 fst-italic">
-                    Updated Jun 17, 2022 by the KongBytes team
+                    Updated May 2, 2023 by the KongBytes team
                 </div>
             </div> 
         </div> 

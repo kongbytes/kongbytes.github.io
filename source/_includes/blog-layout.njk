@@ -41,7 +41,19 @@
             </div>
             <div class="row">
                 <div class="col-md-8 offset-md-2 blog-content">
+
+                    <img class="kb-blog-catch" src="/assets/images/blog/{{ post_catch_img }}" alt="{{ post_catch_img_alt }}"/>
+
+                    <h2 class="kb-blog-catch">{{ post_catch_phrase }}</h2>
+                    <h1>{{ post_title }}</h1>
+                    
+
+                    <p class="kb-blog-meta">
+                        {{ content | readingTime }} read | Updated {{ page.date | dateFormat }} | # {{ post_tags }}
+                    </p>
+
                     {{ content | safe }}
+    
                 </div> 
                 <div class="col-md-8 offset-md-2 mt-5 fst-italic">
                     Updated {{ page.date | dateFormat }} by the KongBytes team
