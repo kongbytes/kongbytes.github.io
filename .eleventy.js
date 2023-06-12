@@ -16,9 +16,17 @@ module.exports = function(config) {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
 
-    config.addCollection('arp', (collection) => {
-        return collection.getFilteredByGlob('source/docs/arp-scan/*');
+    // Do not use tags on documentation pages, the collections are created here
+    // based on the folder structure
+    config.addCollection('arp-scan', (collection) => {
+        return collection.getFilteredByGlob('source/docs/arp-scan/*')
+            .sort((page1, page2) => page1.data.doc_index - page2.data.doc_index);
     });
+    config.addCollection('watchdog', (collection) => {
+        return collection.getFilteredByGlob('source/docs/watchdog/*')
+            .sort((page1, page2) => page1.data.doc_index - page2.data.doc_index);
+    });
+
     config.addCollection('posts', (collection) => {
         return collection.getFilteredByGlob('source/blog/*');
     });
