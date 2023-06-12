@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta name="description" content="Learn how to launch the watchdog network monitoring tool using this getting started guide of the KongBytes watchdog-rs project">
+<title>KongBytes | Watchdog installation</title>
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+        
+        <a class="navbar-brand logo-image" href="/">
+          <img src="/assets/images/navbar_icon.svg">
+        </a>
+        <a class="navbar-brand logo-text page-scroll" href="/">KongBytes</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/docs">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/blog">Blog</a>
+                </li>
+                <span class="navbar-text">
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                </span>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="https://github.com/kongbytes">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="https://twitter.com/kongbytes">Twitter</a>
+                </li>
+            </ul>
+        </div> 
+    
+    </div> 
+</nav>
+<!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <h1>
+                        <span style="font-weight: 500;">Watchdog <span class="ps-2 pe-2">|</span> Getting started
+                    </h1>
+                </div> 
+            </div> 
+        </div> 
+    </header> 
+    <!-- end of header -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 py-5" style="min-height: 80%;">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-9 offset-md-1">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/docs">Documentation</a></li>
+                            <li class="breadcrumb-item"><a href="/docs/watchdog">Watchdog</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Getting started</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 offset-md-1 mb-4">
+
+                    <b>TABLE OF CONTENTS</b>
+                    
+                    <article class="mt-2">
+                        
+                        <a href="/docs/watchdog/">Introduction</a>
+                        
+                    </article>
+                    
+                    <article class="mt-2">
+                        
+                        Getting started
+                        
+                    </article>
+                    
+
+                </div>
+                <div class="col-md-7 kb-doc-content">
+
+                    <h1>Getting started</h1>
+
+                    <p class="kb-docs-meta">
+                        1 min read
+                    </p>
+
+                    <p>Start by retrieving the latest release of the <code>watchdog-rs</code> CLI <a href="https://github.com/kongbytes/watchdog-rs">on the project release page</a> and create a YAML configuration <code>config.yaml</code> file as shown below. This <strong>configuration file</strong> will be used by the monitoring server to manage your configuration accross regions.</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">regions</span><span class="token punctuation">:</span><br>  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> eu<span class="token punctuation">-</span>west<br>    <span class="token key atrule">interval</span><span class="token punctuation">:</span> 5s <span class="token comment"># Interval between network checks in a region</span><br>    <span class="token key atrule">threshold</span><span class="token punctuation">:</span> <span class="token number">3</span> <span class="token comment"># Amount of region failures tolerated before alert</span><br>    <span class="token key atrule">groups</span><span class="token punctuation">:</span><br>      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> default<br>        <span class="token key atrule">threshold</span><span class="token punctuation">:</span> <span class="token number">4</span> <span class="token comment"># Amount of zone failures tolerted before alert</span><br>        <span class="token key atrule">mediums</span><span class="token punctuation">:</span> telegram <span class="token comment"># Alert mediums</span><br>        <span class="token key atrule">tests</span><span class="token punctuation">:</span><br>          <span class="token punctuation">-</span> http www.domain.be</code></pre>
+<p>Launch the main <strong>monitoring server</strong> that will be used by network regions to collect metrics. This service should be reachable by all network regions on port <code>3030</code>.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># Define a set of environment variables that will be used</span><br><span class="token comment"># by the server. In a production environment, this would</span><br><span class="token comment"># be defined in a systemd service.</span><br><span class="token builtin class-name">export</span> <span class="token assign-left variable">TELEGRAM_TOKEN</span><span class="token operator">=</span>x<br><span class="token builtin class-name">export</span> <span class="token assign-left variable">TELEGRAM_CHAT</span><span class="token operator">=</span>x<br><span class="token builtin class-name">export</span> <span class="token assign-left variable">WATCHDOG_TOKEN</span><span class="token operator">=</span>x<br><br><span class="token comment"># Launch the main watchdog server on port 3030</span><br>watchdog server --config ./config.yaml</code></pre>
+<p>In a region, launch a <strong>network relay</strong> : a service that will retrieve the monitoring configuration from the server and start performing network tests. Each time a test is performed, the results will be pushed to the main monitoring server.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># Define a set of environment variables that will be used</span><br><span class="token comment"># by the relay. In a production environment, this would</span><br><span class="token comment"># be defined in a systemd service.</span><br><span class="token builtin class-name">export</span> <span class="token assign-left variable">WATCHDOG_ADDR</span><span class="token operator">=</span>http://localhost:3030<br><span class="token builtin class-name">export</span> <span class="token assign-left variable">WATCHDOG_TOKEN</span><span class="token operator">=</span>x<br><br><span class="token comment"># Launch a watchdog network region relay</span><br>watchdog relay --region eu-west</code></pre>
+<p>On your workstation, use the <strong>CLI</strong> to get details about the monitoring state &amp; ongoing incidents.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># Put these environment variables in a safe place on your</span><br><span class="token comment"># workstation (watch out for shell history)</span><br><span class="token assign-left variable">WATCHDOG_ADDR</span><span class="token operator">=</span>http://localhost:3030<br><span class="token assign-left variable">WATCHDOG_TOKEN</span><span class="token operator">=</span>x<br><br><span class="token comment"># Get the status of all your network regions &amp; zones</span><br>watchdog status</code></pre>
+
+                
+                </div> 
+            </div> 
+        </div> 
+    </div>
+    <!-- end of basic -->
+
+    <!-- Copyright -->
+<div class="copyright bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Copyright © <a class="no-line" href="#your-link">KongBytes</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script defer src="/assets/js/jquery.min.js"></script>
+
+<script defer src="/assets/js/main.js"></script>
+
+
+</body>
+</html>

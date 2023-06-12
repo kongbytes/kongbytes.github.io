@@ -3,9 +3,8 @@ header_title: Getting started with Rust-based ARP scans
 header_description: Learn how to perform ARP scans on local networks using this getting started guide of the KongBytes arp-scan-rs project, a Rust-based ARP scanner
 
 doc_title: Getting started
+doc_index: 1
 --- 
-
-### Getting started with arp-scan
 
 Download the `arp-scan` binary for Linux (Ubuntu, Fedora, Debian, ...). See the [releases page](https://github.com/Saluki/arp-scan-rs/releases) for other binaries.
 

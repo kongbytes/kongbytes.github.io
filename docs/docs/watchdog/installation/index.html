@@ -5,8 +5,8 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta name="description" content="Learn how to perform ARP scans on local networks using this getting started guide of the KongBytes arp-scan-rs project, a Rust-based ARP scanner">
-<title>KongBytes | Getting started with Rust-based ARP scans</title>
+<meta name="description" content="_">
+<title>KongBytes | Watchdog installation</title>
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
@@ -73,7 +73,7 @@
             <div class="row">
                 <div class="col-md-10 offset-md-1">
                     <h1>
-                        <span style="font-weight: 500;">ARP scan <span class="ps-2 pe-2">|</span> Getting started
+                        <span style="font-weight: 500;">Watchdog <span class="ps-2 pe-2">|</span> Installation
                     </h1>
                 </div> 
             </div> 
@@ -90,59 +90,34 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/#">Home</a></li>
                             <li class="breadcrumb-item"><a href="/docs">Documentation</a></li>
-                            <li class="breadcrumb-item"><a href="/docs/arp-scan">ARP scan</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Getting started</li>
+                            <li class="breadcrumb-item"><a href="/docs/watchdog">Watchdog</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Installation</li>
                         </ol>
                     </nav>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 offset-md-1 mb-4">
+                <div class="col-md-2 offset-md-1 mb-4">
 
                     <b>TABLE OF CONTENTS</b>
                     
                     <article class="mt-2">
                         
-                        <a href="/docs/arp-scan/">Introduction</a>
+                        <a href="/docs/watchdog/">Introduction</a>
                         
                     </article>
                     
                     <article class="mt-2">
                         
-                        Getting started
-                        
-                    </article>
-                    
-                    <article class="mt-2">
-                        
-                        <a href="/docs/arp-scan/advanced-scans/">Advanced options</a>
+                        Installation
                         
                     </article>
                     
 
                 </div>
-                <div class="col-md-7 kb-doc-content">
+                <div class="col-md-8">
+                    <h3>Installation</h3>
 
-                    <h1>Getting started</h1>
-
-                    <p class="kb-docs-meta">
-                        1 min read
-                    </p>
-
-                    <p>Download the <code>arp-scan</code> binary for Linux (Ubuntu, Fedora, Debian, ...). See the <a href="https://github.com/Saluki/arp-scan-rs/releases">releases page</a> for other binaries.</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">wget</span> -O arp-scan https://github.com/Saluki/arp-scan-rs/releases/download/v0.13.1/arp-scan-v0.13.1-x86_64-unknown-linux-musl <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x ./arp-scan</code></pre>
-<p>Optionnaly, fetch the IEEE OUI reference file (CSV format) that contains all MAC address vendors.</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">wget</span> -O /usr/share/arp-scan/ieee-oui.csv http://standards-oui.ieee.org/oui/oui.csv</code></pre>
-<p>List all available network interfaces.</p>
-<pre class="language-bash"><code class="language-bash">./arp-scan -l</code></pre>
-<p>Launch a scan on interface <code>wlp1s0</code>.</p>
-<pre class="language-bash"><code class="language-bash">./arp-scan -i wlp1s0</code></pre>
-<p>Enhance the minimum scan timeout to 5 seconds (by default, 2 seconds).</p>
-<pre class="language-bash"><code class="language-bash">./arp-scan -i wlp1s0 -t 5s</code></pre>
-<p>Perform an ARP scan on the default network interface, VLAN 45 and JSON output.</p>
-<pre class="language-bash"><code class="language-bash">./arp-scan -Q <span class="token number">45</span> -o json</code></pre>
-
-                
                 </div> 
             </div> 
         </div> 

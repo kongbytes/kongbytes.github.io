@@ -97,27 +97,39 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2 offset-md-1 mb-4">
+                <div class="col-md-3 offset-md-1 mb-4">
 
                     <b>TABLE OF CONTENTS</b>
                     
                     <article class="mt-2">
-                        <a href="/docs/arp-scan/advanced-scans/">Advanced options</a>
+                        
+                        Introduction
+                        
                     </article>
                     
                     <article class="mt-2">
+                        
                         <a href="/docs/arp-scan/getting-started/">Getting started</a>
+                        
                     </article>
                     
                     <article class="mt-2">
-                        <a href="/docs/arp-scan/">Introduction</a>
+                        
+                        <a href="/docs/arp-scan/advanced-scans/">Advanced options</a>
+                        
                     </article>
                     
 
                 </div>
-                <div class="col-md-8">
-                    <h3>Introduction</h3>
-<p>Find all hosts in your local network using this fast ARP scanner. The CLI is written in Rust and provides a minimal scanner that finds all hosts using the ARP protocol. Inspired by the awesome <a href="https://github.com/royhills/arp-scan">arp-scan project</a>.</p>
+                <div class="col-md-7 kb-doc-content">
+
+                    <h1>Introduction</h1>
+
+                    <p class="kb-docs-meta">
+                        1 min read
+                    </p>
+
+                    <p>Find all hosts in your local network using this fast ARP scanner. The CLI is written in Rust and provides a minimal scanner that finds all hosts using the ARP protocol. Inspired by the awesome <a href="https://github.com/royhills/arp-scan">arp-scan project</a>.</p>
 <p>✔ Minimal Rust binary &amp; fast ARP scans</p>
 <p>✔ Scan customization (ARP, timings, interface, DNS, ...)</p>
 <p>✔ MAC vendor search</p>
@@ -129,6 +141,7 @@
 <p>Perform a default ARP scan on the local network with safe defaults.</p>
 <pre class="language-bash"><code class="language-bash"><span class="token comment"># Perform a scan on the default network interface</span><br>$ arp-scan<br><br>Selected interface wlp1s0 with IP <span class="token number">192.168</span>.1.21/24<br>Estimated scan <span class="token function">time</span> 2068ms <span class="token punctuation">(</span><span class="token number">10752</span> bytes, <span class="token number">14000</span> bytes/s<span class="token punctuation">)</span><br>Sending <span class="token number">256</span> ARP requests <span class="token punctuation">(</span>waiting at least 800ms, 0ms request interval<span class="token punctuation">)</span><br><br><span class="token operator">|</span> IPv4            <span class="token operator">|</span> MAC               <span class="token operator">|</span> Hostname     <span class="token operator">|</span> Vendor       <span class="token operator">|</span><br><span class="token operator">|</span>-----------------<span class="token operator">|</span>-------------------<span class="token operator">|</span>--------------<span class="token operator">|</span>--------------<span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.1     <span class="token operator">|</span> <span class="token number">91</span>:10:fb:30:06:04 <span class="token operator">|</span> router.home  <span class="token operator">|</span> Vendor, Inc. <span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.11    <span class="token operator">|</span> <span class="token number">45</span>:2e:99:bc:22:b6 <span class="token operator">|</span> host-a.home  <span class="token operator">|</span>              <span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.15    <span class="token operator">|</span> bc:03:c2:92:47:df <span class="token operator">|</span> host-b.home  <span class="token operator">|</span> Vendor, Inc. <span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.18    <span class="token operator">|</span> 8d:eb:56:17:b8:e1 <span class="token operator">|</span> host-c.home  <span class="token operator">|</span> Vendor, Inc. <span class="token operator">|</span><br><span class="token operator">|</span> <span class="token number">192.168</span>.1.34    <span class="token operator">|</span> <span class="token number">35</span>:e0:6c:1e:e3:fe <span class="token operator">|</span>              <span class="token operator">|</span> Vendor, Inc. <span class="token operator">|</span><br><br>ARP scan finished, <span class="token number">5</span> hosts found <span class="token keyword">in</span> <span class="token number">1.623</span> seconds<br><span class="token number">7</span> packets received, <span class="token number">5</span> ARP packets filtered</code></pre>
 
+                
                 </div> 
             </div> 
         </div> 

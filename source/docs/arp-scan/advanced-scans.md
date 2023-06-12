@@ -3,9 +3,8 @@ header_title: Performing advanced ARP scans
 header_description: Discover all advanced CLI options (JSON, ARP internals, scan profiles, ...) offered by the KongBytes arp-scan-rs project, a Rust-based ARP scanner
 
 doc_title: Advanced options
+doc_index: 2
 --- 
-
-### Advanced scan options
   
 #### Get help `-h`
 
