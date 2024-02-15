@@ -11,6 +11,11 @@ header_description: KongBytes is a team ready to build and deliver your next dig
 </head>
 <body>
 
+    <!-- Preload background image for LCP -->
+    <div style="display: none;">
+        <img alt src="assets/images/header-background-optimal.webp" />
+    </div>
+
     {% include "_navbar.njk" %}
 
     <!-- Header -->
@@ -66,7 +71,7 @@ header_description: KongBytes is a team ready to build and deliver your next dig
                     </div> 
                 </div>
                 <div class="col-lg-2">
-                    <img src="/assets/images/kongbytes_outlined_logo.svg">
+                    <img alt="KongBytes logo" src="/assets/images/kongbytes_outlined_logo.svg">
                 </div>
             </div> 
         </div>
